@@ -1,5 +1,10 @@
 <template>
     <div>
-        <NuxtPage />
+        
     </div>
+
 </template>
+
+<script setup>
+await navigateTo("/home");
+</script>

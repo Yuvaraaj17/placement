@@ -1,5 +1,5 @@
 <template>
-        <div class="flex flex-row w-screen bg-slate-400">
+        <div class="flex flex-row w-screen h-screen">
         <Sidebar />
         <NuxtPage />
 
@@ -8,6 +8,7 @@
 </template>
 
 <script setup>
+
 </script>
 
 <style lang="scss" scoped>
