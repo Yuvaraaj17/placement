@@ -1,7 +1,7 @@
 <template>
-    <div class="h-full fixed bg-red-500 transition-width duration-500 ease-out"
-        :class="{ 'w-1/5': isToggle, 'w-24': !isToggle }">
-        <div class="flex flex-col h-screen items-center pt-5 gap-10">
+    <div class="h-screen bg-red-500 transition-width duration-500 ease-out"
+        :class="{ 'w-56': isToggle, 'w-24': !isToggle }">
+        <div class="flex flex-col items-center pt-5 gap-10">
             <div class="relative w-full pb-4">
                 <img @click="toggle" src="/Hamburger.png" alt="" class="absolute transition-all duration-500 ease-out"
                     :class="{ 'ml-64': isToggle, 'ml-[30px]': !isToggle }">
@@ -70,3 +70,4 @@ function toggle() {
     transition-timing-function: ease-out;
     
 }</style>
+
