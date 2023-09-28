@@ -3,7 +3,19 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
 
   modules: [
-    '@nuxtjs/tailwindcss'
-  ]
-
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/google-fonts'
+  ],
+  googleFonts: {
+    families: {
+      // a simple name
+      
+  
+      // a name with spaces
+     
+      
+      Poppins: true
+    }
+  }
+  
 })

@@ -1,161 +1,101 @@
-<template>
-    <div class="flex flex-col w-full h-full overflow-x-scroll overflow-y-scroll">
-        <div class="h-1/4">Welcome To Practice Section</div>
-        <div id="topic-container" class="h-3/4 grid grid-cols-3">
-            <div class="topic">Quantitative Aptitude
-                <div class="description">
-                    <ul>
-                        <li>Topic-Wise Tests</li>
-                        <li>Full length Mock-Test</li>
-                        <li>Puzzle Questions</li>
+<template> 
+    <div class="flex flex-col w-full h-full p-5 gap-5  overflow-x-hidden overflow-y-scroll relative">
+        <div class="flex w-full h-48 bg-slate-500">Welcome to practice section</div>
+        <div class="flex bg-slate-400 h-32 text-2xl">Choose a Topic to get started</div>
+        <div class="absolute w-full mt-96 grid grid-cols-3 gap-10 pr-10"><!-- can give w-1380px instead of w-full and remove pr-10 -->
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105 ">
+                <div class="flex w-full h-fit py-3 px-4 text-2xl ">Quantitative Aptitude</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
+                        <li>Topic-wise Questions</li>
+                        <li>Full length Mock Test</li>
+                        <li>Puzzles</li>
                     </ul>
-                    <span class="readmore">Read more...</span>
                 </div>
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
             </div>
-            <div class="topic">Core Concepts
-                <div class="description">
-                    <ul>
-                        <li>Computer Networks</li>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
+                <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Core Concepts</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
                         <li>Operating Systems</li>
-                        <li>Software Engineering</li>
+                        <li>Computer Networks</li>
+                        <li>Theory of Computation</li>
                     </ul>
-                    <span class="readmore">Read more...</span>
                 </div>
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
             </div>
-            <div class="topic">Programming
-                <div class="description pl-8">
-                    <ul>
-                        <li>C Programming</li>
-                        <li>Java Programming</li>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
+                <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Programming</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
                         <li>Python Programming</li>
-                        
+                        <li>Java Programming</li>
+                        <li>C/C++ Programming</li>
                     </ul>
-                    <span class="readmore">Read more...</span>
                 </div>
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
             </div>
-            <div class="topic">Psychomtery
-                <div class="description">
-                    <ul>
-                        <li>Abstract Reasoning</li>
-                        <li>Situation Reaction</li>
-                        <li>Personality Traits</li>
-                    </ul>
-                    <span class="readmore">Read more...</span>
-                </div>
-            </div>
-            <div class="topic">Soft Skills
-                <div class="description">
-                    <ul>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
+                <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Behavioural Assessments</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
                         <li>Technical Interview</li>
                         <li>HR Interview</li>
                         <li>Group Discussion</li>
                     </ul>
-                    <span class="readmore">Read more...</span>
                 </div>
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
             </div>
-            <div class="topic">Verbal Reasoning
-                <div class="description">
-                    <ul>
-                        <li>Error Correction</li>
-                        <li>Synonyms</li>
-                        <li>Reading Comprehension</li>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
+                <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Psychometry</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
+                        <li>Abstraction Reasoning</li>
+                        <li>Situational Judgement</li>
+                        <li>Personality Traits</li>
                     </ul>
-                    <span class="readmore">Read more...</span>
                 </div>
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
             </div>
-            <div class="topic">One</div>
-            <div class="topic">Two</div>
-            <div class="topic">Three</div>
-
-
-
-
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
+                <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Verbal Resoning</div>
+                <div class="flex w-full pl-16 pr-5 py-5">
+                    <ul class="flex flex-col gap-2 text-[18px] font-medium">
+                        <li>Error Correction</li>
+                        <li>Reading Comprehension</li>
+                        <li>Homophones,Articles</li>
+                    </ul>
+                </div>
+                
+                <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
+            </div>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] ">
+                <div class="flex w-full bg-orange-200 h-fit py-3 px-4 te text-2xl font-sans">Title</div>
+                <div class="flex flex-col bg-cyan-300 w-full pt-5 pl-16 pr-5">Contents</div>
+                <div class="flex w-full h-full items-end justify-end bg-red-300 p-3">Read More...</div>
+            </div>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] ">
+                <div class="flex w-full bg-orange-200 h-fit py-3 px-4 te text-2xl ">Title</div>
+                <div class="flex flex-col bg-cyan-300 w-full pt-5 pl-16 pr-5">Contents</div>
+                <div class="flex w-full h-full items-end justify-end bg-red-300 p-3">Read More...</div>
+            </div>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] ">
+                <div class="flex w-full bg-orange-200 h-fit py-3 px-4 te text-2xl ">Title</div>
+                <div class="flex flex-col bg-cyan-300 w-full pt-5 pl-16 pr-5">Contents</div>
+                <div class="flex w-full h-full items-end justify-end bg-red-300 p-3">Read More...</div>
+            </div>
+            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] ">
+                <div class="flex w-full bg-orange-200 h-fit py-3 px-4 te text-2xl ">Title</div>
+                <div class="flex flex-col bg-cyan-300 w-full pt-5 pl-16 pr-5">Contents</div>
+                <div class="flex w-full h-full items-end justify-end bg-red-300 p-3">Read More...</div>
+            </div>
         </div>
     </div>
 </template>
-
 <script setup>
 definePageMeta({
-    layout: "main-layout",
-
+    layout:"main-layout",
+    
 })
 </script>
-<style scoped>
-.topic {
-    height: 250px;
-    color: rgb(233, 30, 99);
-    background-color: white;
-    box-shadow: 0px 0px 7px rgb(206, 206, 206);
-    border-radius: 8px;
-    padding-left: 30px;
-    padding-top: 25px;
-    font-size: 23px;
-    font-family: Poppins;
-    font-weight: 550;
-
-}
-
-.description {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    margin-left: 10%;
-    padding-top: 20px;
-    padding-left: 32px;
-    padding-right: 15px;
-    font-weight: 500;
-    font-family: 'Segoe UI';
-    color: rgb(37, 37, 37);
-    font-size: 20px;
-    gap: 10px;
-
-}
-.readmore{
-    display: flex;
-    font-size: large;
-    color: grey;
-    justify-content: flex-end;
-    padding-right: 20px;
-    
-}
-
-.description ul {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.description ul li::before {
-
-    display: inline-block;
-    justify-content: center;
-    align-items: center;
-    content: "";
-    width: 7px;
-    /* Diameter of the circle */
-    height: 7px;
-    /* Diameter of the circle */
-    background-color: black;
-    /* Color of the circle */
-    border-radius: 50%;
-    /* Make it a circle */
-    margin-right: 10px;
-    margin-bottom: 3px;
-    /* Spacing between the circle and text */
-}
-
-::-webkit-scrollbar {
-
-    width: 10px;
-    border-radius: 15px;
-    background-color: #f5f5f5;
-    /* Background color of the track */
-}
-
-/* Style the scrollbar thumb (the draggable part) */
-::-webkit-scrollbar-thumb {
-    background-color: lightcoral;
-    /* Color of the thumb */
-    border-radius: 15px;
-    /* Rounded corners for the thumb */
-}</style>
