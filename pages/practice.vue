@@ -3,8 +3,8 @@
         <div class="flex w-full h-48 bg-slate-500">Welcome to practice section</div>
         <div class="flex bg-slate-400 h-32 text-2xl">Choose a Topic to get started</div>
         <div class="absolute w-full mt-96 grid grid-cols-3 gap-10 pr-10"><!-- can give w-1380px instead of w-full and remove pr-10 -->
-            <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105 ">
-                <div class="flex w-full h-fit py-3 px-4 text-2xl ">Quantitative Aptitude</div>
+            <NuxtLink to="/quant_aptitude" class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105 ">
+                <div class="flex w-full h-fit py-3 px-4 text-2xl cursor-default">Quantitative Aptitude</div>
                 <div class="flex w-full pl-16 pr-5 py-5">
                     <ul class="flex flex-col gap-2 text-[18px] font-medium">
                         <li>Topic-wise Questions</li>
@@ -13,7 +13,7 @@
                     </ul>
                 </div>
                 <div class="flex w-full h-full items-end justify-end p-3">Read More...</div>
-            </div>
+            </NuxtLink>
             <div class="flex flex-col gap-2 w-full bg-gray-200 rounded-lg drop-shadow-lg h-[250px] transition-all duration-300 hover:bg-cyan-600 hover:text-white hover:scale-105">
                 <div class="flex w-full h-fit py-3 px-4 te text-2xl ">Core Concepts</div>
                 <div class="flex w-full pl-16 pr-5 py-5">

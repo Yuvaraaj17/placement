@@ -8,13 +8,11 @@ export default defineNuxtConfig({
   ],
   googleFonts: {
     families: {
-      // a simple name
-      
-  
-      // a name with spaces
-     
-      
-      Poppins: true
+      // Verdana:true,
+      // Sans: true,
+      // 'Lora':true,
+      //   'Poppins':true,
+        
     }
   }
   
