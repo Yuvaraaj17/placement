@@ -1,59 +1,181 @@
 <template>
-    <div class="w-full h-full gap-6 bg-cyan-400 flex flex-col px-36 p-10" >
-        <div id="topicone" class="flex flex-col justify-center h-fit" @click="openTopic1">
-            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md">
+    <div class="w-full h-full gap-12 bg-cyan-300 flex flex-col px-36 p-10 overflow-y-scroll" >
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400  p-4 rounded-md ">
                 <div class="flex h-12 w-12 items-center justify-center">
                     <img src="/folder_close.png">
                 </div>
-                <div class="flex h-full w-full items-center text-lg">
+                <div class="flex h-full w-full items-center text-lg ">
                     Time and Distance
                 </div>
-                <div class="flex h-11 w-11 items-center justify-center p-2 relative">
-                    <img class="transition-all duration-200 ease-out" src="/double_arrow.png" alt="" :class="{'opacity-0':isOpen1,'opacity-100':!isOpen1}">
-                    <img class="transition-all duration-200 ease-out absolute h-11 w-11 p-2 rotate-180" src="/double_arrow.png" alt="" :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">
-                </div>
             </div>
-            <div class="flex w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden " :class="{'h-0':!isOpen1,'h-32':isOpen1}">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
                 <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
-                    <li class="transition-opacity duration-500 ease-out absolute left-0" :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">Time and Distance I</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-1/4 " :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">Time and Distance II</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-2/4" :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">Time and Distance III</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-3/4" :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">Time and Distance IV</li>
-                    <li class="transition-opacity duration-500 ease-out absolute top-12" :class="{'opacity-0':!isOpen1,'opacity-100':isOpen1}">Time and Distance V</li>
-                    
+                    <NuxtLink to="/Quantitative_Aptitude/Set1/page1" class="absolute left-0 underline-offset-4 hover:underline">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4 underline-offset-4 hover:underline">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4 underline-offset-4 hover:underline">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4 underline-offset-4 hover:underline">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12 underline-offset-4 hover:underline">Question Set V</NuxtLink>
                 </ul>
-
             </div>
-
         </div>
-        <div id="topicone" class="flex flex-col justify-center h-fit" @click="openTopic2">
-            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md">
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
                 <div class="flex h-12 w-12 items-center justify-center">
                     <img src="/folder_close.png">
                 </div>
-                <div class="flex h-full w-full items-center text-lg">
-                    Time and Distance
-                </div>
-                <div class="flex h-11 w-11 items-center justify-center p-2 relative">
-                    <img class="transition-all duration-200 ease-out" src="/double_arrow.png" alt="" :class="{'opacity-0':isOpen2,'opacity-100':!isOpen2}">
-                    <img class="transition-all duration-200 ease-out absolute h-11 w-11 p-2 rotate-180" src="/double_arrow.png" alt="" :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">
+                <div class="flex h-full w-full items-center text-lg ">
+                    Men and Work
                 </div>
             </div>
-            <div class="flex w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden " :class="{'h-0':!isOpen2,'h-32':isOpen2}">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
                 <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
-                    <li class="transition-opacity duration-500 ease-out absolute left-0" :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">Time and Distance I</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-1/4 " :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">Time and Distance II</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-2/4" :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">Time and Distance III</li>
-                    <li class="transition-opacity duration-500 ease-out absolute left-3/4" :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">Time and Distance IV</li>
-                    <li class="transition-opacity duration-500 ease-out absolute top-12" :class="{'opacity-0':!isOpen2,'opacity-100':isOpen2}">Time and Distance V</li>
-                    
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
                 </ul>
-
             </div>
-
         </div>
-        
-
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Simple and Compound Interest
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div> 
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Profit and Loss
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div>
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Allegation and Mixtures
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div>
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Probability
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div>
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Permutation and Combinations
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div>
+        <div class="cursor-pointer flex flex-col justify-center h-fit relative">
+            <input type="checkbox" class="opacity-0 absolute top-0 h-20 w-full inset-x-0 peer">
+            <div class="w-full h-fit flex items-center justify-between flex-row gap-2 bg-slate-400 p-4 rounded-md ">
+                <div class="flex h-12 w-12 items-center justify-center">
+                    <img src="/folder_close.png">
+                </div>
+                <div class="flex h-full w-full items-center text-lg ">
+                    Problems on Numbers
+                </div>
+            </div>
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-7 right-7 transition-all delay-75 duration-200 ease-out opacity-100 peer-checked:opacity-0" src="/double_arrow.png">
+            <img class="absolute flex h-6 w-6 items-center justify-center  top-6 right-7 transition-all delay-75 duration-200 ease-out rotate-180 opacity-0 peer-checked:opacity-100" src="/double_arrow.png">
+            <div class="flex rounded-t-sm w-full transition-all duration-500 ease-out bg-white justify-center rounded-b-md overflow-hidden h-0 peer-checked:h-32">
+                <ul class="mx-16 mt-5 flex w-full h-full text-cyan-700 relative ">
+                    <NuxtLink to="/" class="absolute left-0">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-1/4">Question Set I</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-2/4">Question Set III</NuxtLink>
+                    <NuxtLink to="/" class="absolute left-3/4">Question Set IV</NuxtLink>
+                    <NuxtLink to="/" class="absolute top-12">Question Set V</NuxtLink>
+                </ul>
+            </div>
+        </div>      
     </div>
 </template>
 
@@ -63,18 +185,6 @@ definePageMeta({
     layout: 'main-layout'
 })
 
-// const element=document.getElementById("topicone");
-
-const isOpen1=ref(false);
-const isOpen2=ref(false);
-function openTopic1(){
-    isOpen1.value=!isOpen1.value
-    
-}
-function openTopic2(){
-    isOpen2.value=!isOpen2.value
-    
-}
 
 </script>
     
