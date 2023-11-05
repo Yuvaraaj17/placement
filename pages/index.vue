@@ -6,5 +6,5 @@
 </template>
 
 <script setup>
-await navigateTo("/home");
+await navigateTo("/auth");
 </script>

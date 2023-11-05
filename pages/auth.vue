@@ -30,7 +30,17 @@
             user_id: userid.value,
             password: password.value
         }
-    }).then((response) => console.log(response))
+    }).then(async (response) => {
+        if(response.data.value==true){
+            console.log("redirect to admin home page");
+            await navigateTo("home")
+        }
+    else{
+        alert("Invalid user id or password")
+    }
+    }
+    
+    )
     }   
     
 </script>
