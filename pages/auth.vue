@@ -9,7 +9,7 @@
             </div>
             <div class="flex flex-row justify-between">
                 <div>
-                    Password
+                    Password new
                 </div>
                 <input type="text" ref="input2" @keypress.enter="focusbtn" v-model="password" class="bg-transparent px-1 py-1 border border-black rounded-md w-[250px] focus:outline-none ">
             </div>
