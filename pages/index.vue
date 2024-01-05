@@ -6,5 +6,8 @@
 </template>
 
 <script setup>
-await navigateTo("/auth");
+import { useCounter } from '~/composables/states';
+
+navigateTo("/auth");
+
 </script>

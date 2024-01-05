@@ -5,42 +5,63 @@
                 <div class="">
                     User Id
                 </div>
-                <input type="text" v-model.number="userid" class="bg-transparent border border-black rounded-md w-[250px]">
+                <input type="text" ref="input1" @keypress.enter="focusInput" v-model.number="userid" class="bg-transparent px-1 py-1 border border-black rounded-md w-[250px] focus:outline-none">
             </div>
             <div class="flex flex-row justify-between">
                 <div>
                     Password
                 </div>
-                <input type="text" v-model= "password" class="bg-transparent border border-black rounded-md w-[250px] ">
+                <input type="text" ref="input2" @keypress.enter="focusbtn" v-model="password" class="bg-transparent px-1 py-1 border border-black rounded-md w-[250px] focus:outline-none ">
             </div>
-            <input type="button" @click="validate" value="Submit" class="text-white rounded bg-pink-700 w-28 h-8 self-end">
+            <input type="button" ref="btn" @keypress.enter="validate" value="Submit" class="text-white rounded bg-pink-700 w-28 h-8 self-end focus:outline-none focus:scale-110 transition-transform duration-200 ease-out">
         </form>
     </div>
 </template>
 
 <script setup>
-    const userid = ref()
-    const password = ref('')
-    async function validate(){
-        console.log(userid.value,typeof(userid.value));
-        console.log(password.value,typeof(password.value));
-        await useFetch("http://localhost:8000/login",{
+const userid = ref()
+const password = ref('')
+const input1=ref(null)
+const input2=ref(null)
+const btn=ref(null)
+
+onMounted(() => {
+  input1.value.focus()
+})
+
+function focusInput(){
+    input2.value.focus()
+}
+
+function focusbtn(){
+    btn.value.focus()
+}
+
+async function validate() {
+    
+    console.log(userid.value, typeof (userid.value));
+    console.log(password.value, typeof (password.value));
+    await useFetch("http://localhost:8000/login", {
         method: 'post',
         body: {
             user_id: userid.value,
             password: password.value
         }
     }).then(async (response) => {
-        if(response.data.value==true){
+        if (response.data.value == true) {
             console.log("redirect to admin home page");
-            await navigateTo("home")
+            useCurrentUser().value = userid.value
+            await navigateTo("admin_home")
         }
-    else{
-        alert("Invalid user id or password")
+        else {
+            alert("Invalid user id or password")
+            input1.value.focus()
+        }
     }
-    }
-    
+
     )
-    }   
-    
+    userid.value=''
+    password.value=''
+}
+
 </script>
